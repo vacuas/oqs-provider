@@ -53,9 +53,9 @@ static int oqsx_key_recreate_classickey(OQSX_KEY *key, oqsx_key_op_t op);
 ///// OQS_TEMPLATE_FRAGMENT_OQSNAMES_START
 
 #ifdef OQS_KEM_ENCODERS
-#define NID_TABLE_LEN 110
+#define NID_TABLE_LEN 106
 #else
-#define NID_TABLE_LEN 56
+#define NID_TABLE_LEN 52
 #endif
 
 static oqs_nid_name_t nid_names[NID_TABLE_LEN] = {
@@ -188,45 +188,33 @@ static oqs_nid_name_t nid_names[NID_TABLE_LEN] = {
     {0, "OV_Ip_pkc_skc", OQS_SIG_alg_uov_ov_Ip_pkc_skc, KEY_TYPE_SIG, 128},
     {0, "p256_OV_Ip_pkc_skc", OQS_SIG_alg_uov_ov_Ip_pkc_skc, KEY_TYPE_HYB_SIG,
      128},
-    {0, "snova2454", OQS_SIG_alg_snova_SNOVA_24_5_4, KEY_TYPE_SIG, 128},
-    {0, "p256_snova2454", OQS_SIG_alg_snova_SNOVA_24_5_4, KEY_TYPE_HYB_SIG,
+    {0, "snova5o", OQS_SIG_alg_snova_SNOVA_24_5_16_4, KEY_TYPE_SIG, 128},
+    {0, "p256_snova5o", OQS_SIG_alg_snova_SNOVA_24_5_16_4, KEY_TYPE_HYB_SIG,
      128},
-    {0, "snova2454esk", OQS_SIG_alg_snova_SNOVA_24_5_4_esk, KEY_TYPE_SIG, 128},
-    {0, "p256_snova2454esk", OQS_SIG_alg_snova_SNOVA_24_5_4_esk,
+    {0, "snova5oa", OQS_SIG_alg_snova_SNOVA_24_5_16_4_AES, KEY_TYPE_SIG, 128},
+    {0, "p256_snova5oa", OQS_SIG_alg_snova_SNOVA_24_5_16_4_AES,
      KEY_TYPE_HYB_SIG, 128},
-    {0, "snova37172", OQS_SIG_alg_snova_SNOVA_37_17_2, KEY_TYPE_SIG, 128},
-    {0, "p256_snova37172", OQS_SIG_alg_snova_SNOVA_37_17_2, KEY_TYPE_HYB_SIG,
+    {0, "snova5", OQS_SIG_alg_snova_SNOVA_28_5_19_4, KEY_TYPE_SIG, 128},
+    {0, "p256_snova5", OQS_SIG_alg_snova_SNOVA_28_5_19_4, KEY_TYPE_HYB_SIG,
      128},
-    {0, "snova2455", OQS_SIG_alg_snova_SNOVA_24_5_5, KEY_TYPE_SIG, 192},
-    {0, "p384_snova2455", OQS_SIG_alg_snova_SNOVA_24_5_5, KEY_TYPE_HYB_SIG,
-     192},
-    {0, "snova2965", OQS_SIG_alg_snova_SNOVA_29_6_5, KEY_TYPE_SIG, 256},
-    {0, "p521_snova2965", OQS_SIG_alg_snova_SNOVA_29_6_5, KEY_TYPE_HYB_SIG,
-     256},
-    {0, "slhdsasha2128s", OQS_SIG_alg_slh_dsa_pure_sha2_128s, KEY_TYPE_SIG,
+    {0, "snova5a", OQS_SIG_alg_snova_SNOVA_28_5_19_4_AES, KEY_TYPE_SIG, 128},
+    {0, "p256_snova5a", OQS_SIG_alg_snova_SNOVA_28_5_19_4_AES, KEY_TYPE_HYB_SIG,
      128},
-    {0, "slhdsasha2128f", OQS_SIG_alg_slh_dsa_pure_sha2_128f, KEY_TYPE_SIG,
+    {0, "snova7", OQS_SIG_alg_snova_SNOVA_40_7_19_4, KEY_TYPE_SIG, 192},
+    {0, "p384_snova7", OQS_SIG_alg_snova_SNOVA_40_7_19_4, KEY_TYPE_HYB_SIG,
+     192},
+    {0, "snova9", OQS_SIG_alg_snova_SNOVA_50_9_19_4, KEY_TYPE_SIG, 256},
+    {0, "p521_snova9", OQS_SIG_alg_snova_SNOVA_50_9_19_4, KEY_TYPE_HYB_SIG,
+     256},
+    {0, "snova17", OQS_SIG_alg_snova_SNOVA_48_17_16_2, KEY_TYPE_SIG, 128},
+    {0, "p521_snova17", OQS_SIG_alg_snova_SNOVA_48_17_16_2, KEY_TYPE_HYB_SIG,
      128},
-    {0, "slhdsasha2192s", OQS_SIG_alg_slh_dsa_pure_sha2_192s, KEY_TYPE_SIG,
-     192},
-    {0, "slhdsasha2192f", OQS_SIG_alg_slh_dsa_pure_sha2_192f, KEY_TYPE_SIG,
-     192},
-    {0, "slhdsasha2256s", OQS_SIG_alg_slh_dsa_pure_sha2_256s, KEY_TYPE_SIG,
-     256},
-    {0, "slhdsasha2256f", OQS_SIG_alg_slh_dsa_pure_sha2_256f, KEY_TYPE_SIG,
-     256},
-    {0, "slhdsashake128s", OQS_SIG_alg_slh_dsa_pure_shake_128s, KEY_TYPE_SIG,
+    {0, "snova16", OQS_SIG_alg_snova_SNOVA_48_16_19_2, KEY_TYPE_SIG, 128},
+    {0, "p521_snova16", OQS_SIG_alg_snova_SNOVA_48_16_19_2, KEY_TYPE_HYB_SIG,
      128},
-    {0, "slhdsashake128f", OQS_SIG_alg_slh_dsa_pure_shake_128f, KEY_TYPE_SIG,
+    {0, "snova4", OQS_SIG_alg_snova_SNOVA_28_4_19_4x5, KEY_TYPE_SIG, 128},
+    {0, "p256_snova4", OQS_SIG_alg_snova_SNOVA_28_4_19_4x5, KEY_TYPE_HYB_SIG,
      128},
-    {0, "slhdsashake192s", OQS_SIG_alg_slh_dsa_pure_shake_192s, KEY_TYPE_SIG,
-     192},
-    {0, "slhdsashake192f", OQS_SIG_alg_slh_dsa_pure_shake_192f, KEY_TYPE_SIG,
-     192},
-    {0, "slhdsashake256s", OQS_SIG_alg_slh_dsa_pure_shake_256s, KEY_TYPE_SIG,
-     256},
-    {0, "slhdsashake256f", OQS_SIG_alg_slh_dsa_pure_shake_256f, KEY_TYPE_SIG,
-     256},
     ///// OQS_TEMPLATE_FRAGMENT_OQSNAMES_END
 };
 

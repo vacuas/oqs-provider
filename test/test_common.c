@@ -19,9 +19,11 @@ const char *kHybridSignatureAlgorithms[] = {
     "p384_mayo3",           "p521_mayo5",
     "p256_OV_Is_pkc",       "p256_OV_Ip_pkc",
     "p256_OV_Is_pkc_skc",   "p256_OV_Ip_pkc_skc",
-    "p256_snova2454",       "p256_snova2454esk",
-    "p256_snova37172",      "p384_snova2455",
-    "p521_snova2965",       NULL,
+    "p256_snova5o",         "p256_snova5oa",
+    "p256_snova5",          "p256_snova5a",
+    "p384_snova7",          "p521_snova9",
+    "p521_snova17",         "p521_snova16",
+    "p256_snova4",          NULL,
 };
 ///// OQS_TEMPLATE_FRAGMENT_HYBRID_SIG_ALGS_END
 
@@ -32,7 +34,7 @@ typedef struct {
 
 ///// OQS_TEMPLATE_FRAGMENT_CTX_STR_SIG_ALGS_START
 
-#define SIGS_DICT_LEN 56
+#define SIGS_DICT_LEN 52
 
 /** \brief Mapping of signature algorithm with PQ naming in liboqs */
 oqs_naming_dict kOQSNameMapSignatureAlgorithms[SIGS_DICT_LEN] = {
@@ -71,28 +73,24 @@ oqs_naming_dict kOQSNameMapSignatureAlgorithms[SIGS_DICT_LEN] = {
     {OQS_SIG_alg_uov_ov_Is_pkc_skc, "p256_OV_Is_pkc_skc"},
     {OQS_SIG_alg_uov_ov_Ip_pkc_skc, "OV_Ip_pkc_skc"},
     {OQS_SIG_alg_uov_ov_Ip_pkc_skc, "p256_OV_Ip_pkc_skc"},
-    {OQS_SIG_alg_snova_SNOVA_24_5_4, "snova2454"},
-    {OQS_SIG_alg_snova_SNOVA_24_5_4, "p256_snova2454"},
-    {OQS_SIG_alg_snova_SNOVA_24_5_4_esk, "snova2454esk"},
-    {OQS_SIG_alg_snova_SNOVA_24_5_4_esk, "p256_snova2454esk"},
-    {OQS_SIG_alg_snova_SNOVA_37_17_2, "snova37172"},
-    {OQS_SIG_alg_snova_SNOVA_37_17_2, "p256_snova37172"},
-    {OQS_SIG_alg_snova_SNOVA_24_5_5, "snova2455"},
-    {OQS_SIG_alg_snova_SNOVA_24_5_5, "p384_snova2455"},
-    {OQS_SIG_alg_snova_SNOVA_29_6_5, "snova2965"},
-    {OQS_SIG_alg_snova_SNOVA_29_6_5, "p521_snova2965"},
-    {OQS_SIG_alg_slh_dsa_pure_sha2_128s, "slhdsasha2128s"},
-    {OQS_SIG_alg_slh_dsa_pure_sha2_128f, "slhdsasha2128f"},
-    {OQS_SIG_alg_slh_dsa_pure_sha2_192s, "slhdsasha2192s"},
-    {OQS_SIG_alg_slh_dsa_pure_sha2_192f, "slhdsasha2192f"},
-    {OQS_SIG_alg_slh_dsa_pure_sha2_256s, "slhdsasha2256s"},
-    {OQS_SIG_alg_slh_dsa_pure_sha2_256f, "slhdsasha2256f"},
-    {OQS_SIG_alg_slh_dsa_pure_shake_128s, "slhdsashake128s"},
-    {OQS_SIG_alg_slh_dsa_pure_shake_128f, "slhdsashake128f"},
-    {OQS_SIG_alg_slh_dsa_pure_shake_192s, "slhdsashake192s"},
-    {OQS_SIG_alg_slh_dsa_pure_shake_192f, "slhdsashake192f"},
-    {OQS_SIG_alg_slh_dsa_pure_shake_256s, "slhdsashake256s"},
-    {OQS_SIG_alg_slh_dsa_pure_shake_256f, "slhdsashake256f"},
+    {OQS_SIG_alg_snova_SNOVA_24_5_16_4, "snova5o"},
+    {OQS_SIG_alg_snova_SNOVA_24_5_16_4, "p256_snova5o"},
+    {OQS_SIG_alg_snova_SNOVA_24_5_16_4_AES, "snova5oa"},
+    {OQS_SIG_alg_snova_SNOVA_24_5_16_4_AES, "p256_snova5oa"},
+    {OQS_SIG_alg_snova_SNOVA_28_5_19_4, "snova5"},
+    {OQS_SIG_alg_snova_SNOVA_28_5_19_4, "p256_snova5"},
+    {OQS_SIG_alg_snova_SNOVA_28_5_19_4_AES, "snova5a"},
+    {OQS_SIG_alg_snova_SNOVA_28_5_19_4_AES, "p256_snova5a"},
+    {OQS_SIG_alg_snova_SNOVA_40_7_19_4, "snova7"},
+    {OQS_SIG_alg_snova_SNOVA_40_7_19_4, "p384_snova7"},
+    {OQS_SIG_alg_snova_SNOVA_50_9_19_4, "snova9"},
+    {OQS_SIG_alg_snova_SNOVA_50_9_19_4, "p521_snova9"},
+    {OQS_SIG_alg_snova_SNOVA_48_17_16_2, "snova17"},
+    {OQS_SIG_alg_snova_SNOVA_48_17_16_2, "p521_snova17"},
+    {OQS_SIG_alg_snova_SNOVA_48_16_19_2, "snova16"},
+    {OQS_SIG_alg_snova_SNOVA_48_16_19_2, "p521_snova16"},
+    {OQS_SIG_alg_snova_SNOVA_28_4_19_4x5, "snova4"},
+    {OQS_SIG_alg_snova_SNOVA_28_4_19_4x5, "p256_snova4"},
 };
 ///// OQS_TEMPLATE_FRAGMENT_CTX_STR_SIG_ALGS_END
 

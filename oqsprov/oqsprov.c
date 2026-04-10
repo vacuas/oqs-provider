@@ -57,9 +57,9 @@ extern OSSL_FUNC_provider_get_capabilities_fn oqs_provider_get_capabilities;
 ///// OQS_TEMPLATE_FRAGMENT_ASSIGN_SIG_OIDS_START
 
 #ifdef OQS_KEM_ENCODERS
-#define OQS_OID_CNT 220
+#define OQS_OID_CNT 212
 #else
-#define OQS_OID_CNT 112
+#define OQS_OID_CNT 104
 #endif
 const char *oqs_oid_alg_list[OQS_OID_CNT] = {
 
@@ -244,49 +244,41 @@ const char *oqs_oid_alg_list[OQS_OID_CNT] = {
     "1.3.9999.9.10.2",
     "p256_OV_Ip_pkc_skc",
     "1.3.9999.10.1.1",
-    "snova2454",
+    "snova5o",
     "1.3.9999.10.1.2",
-    "p256_snova2454",
+    "p256_snova5o",
+    "1.3.9999.10.2.1",
+    "snova5oa",
+    "1.3.9999.10.2.2",
+    "p256_snova5oa",
     "1.3.9999.10.3.1",
-    "snova2454esk",
+    "snova5",
     "1.3.9999.10.3.2",
-    "p256_snova2454esk",
+    "p256_snova5",
+    "1.3.9999.10.4.1",
+    "snova5a",
+    "1.3.9999.10.4.2",
+    "p256_snova5a",
     "1.3.9999.10.5.1",
-    "snova37172",
+    "snova7",
     "1.3.9999.10.5.2",
-    "p256_snova37172",
-    "1.3.9999.10.10.1",
-    "snova2455",
-    "1.3.9999.10.10.2",
-    "p384_snova2455",
-    "1.3.9999.10.12.1",
-    "snova2965",
-    "1.3.9999.10.12.2",
-    "p521_snova2965",
-    "2.16.840.1.101.3.4.3.20",
-    "slhdsasha2128s",
-    "2.16.840.1.101.3.4.3.21",
-    "slhdsasha2128f",
-    "2.16.840.1.101.3.4.3.22",
-    "slhdsasha2192s",
-    "2.16.840.1.101.3.4.3.23",
-    "slhdsasha2192f",
-    "2.16.840.1.101.3.4.3.24",
-    "slhdsasha2256s",
-    "2.16.840.1.101.3.4.3.25",
-    "slhdsasha2256f",
-    "2.16.840.1.101.3.4.3.26",
-    "slhdsashake128s",
-    "2.16.840.1.101.3.4.3.27",
-    "slhdsashake128f",
-    "2.16.840.1.101.3.4.3.28",
-    "slhdsashake192s",
-    "2.16.840.1.101.3.4.3.29",
-    "slhdsashake192f",
-    "2.16.840.1.101.3.4.3.30",
-    "slhdsashake256s",
-    "2.16.840.1.101.3.4.3.31",
-    "slhdsashake256f",
+    "p384_snova7",
+    "1.3.9999.10.6.1",
+    "snova9",
+    "1.3.9999.10.6.2",
+    "p521_snova9",
+    "1.3.9999.10.7.1",
+    "snova17",
+    "1.3.9999.10.7.2",
+    "p521_snova17",
+    "1.3.9999.10.8.1",
+    "snova16",
+    "1.3.9999.10.8.2",
+    "p521_snova16",
+    "1.3.9999.10.9.1",
+    "snova4",
+    "1.3.9999.10.9.2",
+    "p256_snova4",
     ///// OQS_TEMPLATE_FRAGMENT_ASSIGN_SIG_OIDS_END
 };
 
@@ -496,59 +488,48 @@ int oqs_patch_oids(void) {
             oqs_oid_alg_list[64 + OQS_KEMOID_CNT] = envval;
         if ((envval = getenv("OQS_OID_P256_OV_IP_PKC_SKC")))
             oqs_oid_alg_list[66 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SNOVA2454")))
+        if ((envval = getenv("OQS_OID_SNOVA5O")))
             oqs_oid_alg_list[68 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_P256_SNOVA2454")))
+        if ((envval = getenv("OQS_OID_P256_SNOVA5O")))
             oqs_oid_alg_list[70 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SNOVA2454ESK")))
+        if ((envval = getenv("OQS_OID_SNOVA5OA")))
             oqs_oid_alg_list[72 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_P256_SNOVA2454ESK")))
+        if ((envval = getenv("OQS_OID_P256_SNOVA5OA")))
             oqs_oid_alg_list[74 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SNOVA37172")))
+        if ((envval = getenv("OQS_OID_SNOVA5")))
             oqs_oid_alg_list[76 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_P256_SNOVA37172")))
+        if ((envval = getenv("OQS_OID_P256_SNOVA5")))
             oqs_oid_alg_list[78 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SNOVA2455")))
+        if ((envval = getenv("OQS_OID_SNOVA5A")))
             oqs_oid_alg_list[80 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_P384_SNOVA2455")))
+        if ((envval = getenv("OQS_OID_P256_SNOVA5A")))
             oqs_oid_alg_list[82 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SNOVA2965")))
+        if ((envval = getenv("OQS_OID_SNOVA7")))
             oqs_oid_alg_list[84 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_P521_SNOVA2965")))
+        if ((envval = getenv("OQS_OID_P384_SNOVA7")))
             oqs_oid_alg_list[86 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHA2128S")))
+        if ((envval = getenv("OQS_OID_SNOVA9")))
             oqs_oid_alg_list[88 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHA2128F")))
+        if ((envval = getenv("OQS_OID_P521_SNOVA9")))
             oqs_oid_alg_list[90 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHA2192S")))
+        if ((envval = getenv("OQS_OID_SNOVA17")))
             oqs_oid_alg_list[92 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHA2192F")))
+        if ((envval = getenv("OQS_OID_P521_SNOVA17")))
             oqs_oid_alg_list[94 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHA2256S")))
+        if ((envval = getenv("OQS_OID_SNOVA16")))
             oqs_oid_alg_list[96 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHA2256F")))
+        if ((envval = getenv("OQS_OID_P521_SNOVA16")))
             oqs_oid_alg_list[98 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHAKE128S")))
+        if ((envval = getenv("OQS_OID_SNOVA4")))
             oqs_oid_alg_list[100 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHAKE128F")))
+        if ((envval = getenv("OQS_OID_P256_SNOVA4")))
             oqs_oid_alg_list[102 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHAKE192S")))
-            oqs_oid_alg_list[104 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHAKE192F")))
-            oqs_oid_alg_list[106 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHAKE256S")))
-            oqs_oid_alg_list[108 + OQS_KEMOID_CNT] = envval;
-        if ((envval = getenv("OQS_OID_SLHDSASHAKE256F")))
-            oqs_oid_alg_list[110 + OQS_KEMOID_CNT] = envval;
     } ///// OQS_TEMPLATE_FRAGMENT_OID_PATCHING_END
     return 1;
 }
 
 #define SIGALG(NAMES, SECBITS, FUNC)                                           \
-    {                                                                          \
-        NAMES, "provider=oqsprovider,oqsprovider.security_bits=" #SECBITS "",  \
-            FUNC                                                               \
-    }
+    {NAMES, "provider=oqsprovider,oqsprovider.security_bits=" #SECBITS "", FUNC}
 #define KEMBASEALG(NAMES, SECBITS)                                             \
     {"" #NAMES "",                                                             \
      "provider=oqsprovider,oqsprovider.security_bits=" #SECBITS "",            \
@@ -651,61 +632,41 @@ static const OSSL_ALGORITHM oqsprovider_signatures[] = {
     SIGALG("OV_Ip_pkc_skc", 128, oqs_signature_functions),
     SIGALG("p256_OV_Ip_pkc_skc", 128, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_4
-    SIGALG("snova2454", 128, oqs_signature_functions),
-    SIGALG("p256_snova2454", 128, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_16_4
+    SIGALG("snova5o", 128, oqs_signature_functions),
+    SIGALG("p256_snova5o", 128, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_4_esk
-    SIGALG("snova2454esk", 128, oqs_signature_functions),
-    SIGALG("p256_snova2454esk", 128, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_16_4_AES
+    SIGALG("snova5oa", 128, oqs_signature_functions),
+    SIGALG("p256_snova5oa", 128, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_37_17_2
-    SIGALG("snova37172", 128, oqs_signature_functions),
-    SIGALG("p256_snova37172", 128, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_5_19_4
+    SIGALG("snova5", 128, oqs_signature_functions),
+    SIGALG("p256_snova5", 128, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_5
-    SIGALG("snova2455", 192, oqs_signature_functions),
-    SIGALG("p384_snova2455", 192, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_5_19_4_AES
+    SIGALG("snova5a", 128, oqs_signature_functions),
+    SIGALG("p256_snova5a", 128, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_29_6_5
-    SIGALG("snova2965", 256, oqs_signature_functions),
-    SIGALG("p521_snova2965", 256, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_40_7_19_4
+    SIGALG("snova7", 192, oqs_signature_functions),
+    SIGALG("p384_snova7", 192, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_128s
-    SIGALG("slhdsasha2128s", 128, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_50_9_19_4
+    SIGALG("snova9", 256, oqs_signature_functions),
+    SIGALG("p521_snova9", 256, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_128f
-    SIGALG("slhdsasha2128f", 128, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_48_17_16_2
+    SIGALG("snova17", 128, oqs_signature_functions),
+    SIGALG("p521_snova17", 128, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_192s
-    SIGALG("slhdsasha2192s", 192, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_48_16_19_2
+    SIGALG("snova16", 128, oqs_signature_functions),
+    SIGALG("p521_snova16", 128, oqs_signature_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_192f
-    SIGALG("slhdsasha2192f", 192, oqs_signature_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_256s
-    SIGALG("slhdsasha2256s", 256, oqs_signature_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_256f
-    SIGALG("slhdsasha2256f", 256, oqs_signature_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_128s
-    SIGALG("slhdsashake128s", 128, oqs_signature_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_128f
-    SIGALG("slhdsashake128f", 128, oqs_signature_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_192s
-    SIGALG("slhdsashake192s", 192, oqs_signature_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_192f
-    SIGALG("slhdsashake192f", 192, oqs_signature_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_256s
-    SIGALG("slhdsashake256s", 256, oqs_signature_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_256f
-    SIGALG("slhdsashake256f", 256, oqs_signature_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_4_19_4x5
+    SIGALG("snova4", 128, oqs_signature_functions),
+    SIGALG("p256_snova4", 128, oqs_signature_functions),
 #endif
     ///// OQS_TEMPLATE_FRAGMENT_SIG_FUNCTIONS_END
     {NULL, NULL, NULL}};
@@ -881,61 +842,41 @@ static const OSSL_ALGORITHM
     SIGALG("OV_Ip_pkc_skc", 128, oqs_OV_Ip_pkc_skc_keymgmt_functions),
     SIGALG("p256_OV_Ip_pkc_skc", 128, oqs_p256_OV_Ip_pkc_skc_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_4
-    SIGALG("snova2454", 128, oqs_snova2454_keymgmt_functions),
-    SIGALG("p256_snova2454", 128, oqs_p256_snova2454_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_16_4
+    SIGALG("snova5o", 128, oqs_snova5o_keymgmt_functions),
+    SIGALG("p256_snova5o", 128, oqs_p256_snova5o_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_4_esk
-    SIGALG("snova2454esk", 128, oqs_snova2454esk_keymgmt_functions),
-    SIGALG("p256_snova2454esk", 128, oqs_p256_snova2454esk_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_16_4_AES
+    SIGALG("snova5oa", 128, oqs_snova5oa_keymgmt_functions),
+    SIGALG("p256_snova5oa", 128, oqs_p256_snova5oa_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_37_17_2
-    SIGALG("snova37172", 128, oqs_snova37172_keymgmt_functions),
-    SIGALG("p256_snova37172", 128, oqs_p256_snova37172_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_5_19_4
+    SIGALG("snova5", 128, oqs_snova5_keymgmt_functions),
+    SIGALG("p256_snova5", 128, oqs_p256_snova5_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_5
-    SIGALG("snova2455", 192, oqs_snova2455_keymgmt_functions),
-    SIGALG("p384_snova2455", 192, oqs_p384_snova2455_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_5_19_4_AES
+    SIGALG("snova5a", 128, oqs_snova5a_keymgmt_functions),
+    SIGALG("p256_snova5a", 128, oqs_p256_snova5a_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_29_6_5
-    SIGALG("snova2965", 256, oqs_snova2965_keymgmt_functions),
-    SIGALG("p521_snova2965", 256, oqs_p521_snova2965_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_40_7_19_4
+    SIGALG("snova7", 192, oqs_snova7_keymgmt_functions),
+    SIGALG("p384_snova7", 192, oqs_p384_snova7_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_128s
-    SIGALG("slhdsasha2128s", 128, oqs_slhdsasha2128s_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_50_9_19_4
+    SIGALG("snova9", 256, oqs_snova9_keymgmt_functions),
+    SIGALG("p521_snova9", 256, oqs_p521_snova9_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_128f
-    SIGALG("slhdsasha2128f", 128, oqs_slhdsasha2128f_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_48_17_16_2
+    SIGALG("snova17", 128, oqs_snova17_keymgmt_functions),
+    SIGALG("p521_snova17", 128, oqs_p521_snova17_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_192s
-    SIGALG("slhdsasha2192s", 192, oqs_slhdsasha2192s_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_48_16_19_2
+    SIGALG("snova16", 128, oqs_snova16_keymgmt_functions),
+    SIGALG("p521_snova16", 128, oqs_p521_snova16_keymgmt_functions),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_192f
-    SIGALG("slhdsasha2192f", 192, oqs_slhdsasha2192f_keymgmt_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_256s
-    SIGALG("slhdsasha2256s", 256, oqs_slhdsasha2256s_keymgmt_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_256f
-    SIGALG("slhdsasha2256f", 256, oqs_slhdsasha2256f_keymgmt_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_128s
-    SIGALG("slhdsashake128s", 128, oqs_slhdsashake128s_keymgmt_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_128f
-    SIGALG("slhdsashake128f", 128, oqs_slhdsashake128f_keymgmt_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_192s
-    SIGALG("slhdsashake192s", 192, oqs_slhdsashake192s_keymgmt_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_192f
-    SIGALG("slhdsashake192f", 192, oqs_slhdsashake192f_keymgmt_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_256s
-    SIGALG("slhdsashake256s", 256, oqs_slhdsashake256s_keymgmt_functions),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_256f
-    SIGALG("slhdsashake256f", 256, oqs_slhdsashake256f_keymgmt_functions),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_4_19_4x5
+    SIGALG("snova4", 128, oqs_snova4_keymgmt_functions),
+    SIGALG("p256_snova4", 128, oqs_p256_snova4_keymgmt_functions),
 #endif
 
 #ifdef OQS_ENABLE_KEM_efrodokem_640_aes
@@ -1226,8 +1167,7 @@ __attribute__((visibility("default")))
 #endif /* !OQS_PROVIDER_STATIC && !_WIN32 */
 int OQS_PROVIDER_ENTRYPOINT_NAME(const OSSL_CORE_HANDLE *handle,
                                  const OSSL_DISPATCH *in,
-                                 const OSSL_DISPATCH **out, void **provctx)
-{
+                                 const OSSL_DISPATCH **out, void **provctx) {
     const OSSL_DISPATCH *orig_in = in;
     OSSL_FUNC_core_obj_create_fn *c_obj_create = NULL;
 
@@ -1304,66 +1244,6 @@ int OQS_PROVIDER_ENTRYPOINT_NAME(const OSSL_CORE_HANDLE *handle,
     if (strcmp("3.5.0", ossl_versionp) <= 0) {
         rt_algo_filter_enabled = 1;
         sk_OPENSSL_STRING_push(rt_disabled_algs, "mldsa87");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsasha2128s");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsasha2128f");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsasha2192s");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsasha2192f");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsasha2256s");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsasha2256f");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsashake128s");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsashake128f");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsashake192s");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsashake192f");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsashake256s");
-    }
-
-    if (strcmp("3.5.0", ossl_versionp) <= 0) {
-        rt_algo_filter_enabled = 1;
-        sk_OPENSSL_STRING_push(rt_disabled_algs, "slhdsashake256f");
     }
 
     if (strcmp("3.5.0", ossl_versionp) <= 0) {

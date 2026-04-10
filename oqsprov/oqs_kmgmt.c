@@ -1021,232 +1021,191 @@ static void *p256_OV_Ip_pkc_skc_gen_init(void *provctx, int selection) {
                          "p256_OV_Ip_pkc_skc", KEY_TYPE_HYB_SIG, 128, 33, 0);
 }
 
-static void *snova2454_new_key(void *provctx) {
+static void *snova5o_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_24_5_4, "snova2454",
+                        OQS_SIG_alg_snova_SNOVA_24_5_16_4, "snova5o",
                         KEY_TYPE_SIG, NULL, 128, 34, 0);
 }
 
-static void *snova2454_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_24_5_4,
-                         "snova2454", 0, 128, 34, 0);
+static void *snova5o_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_24_5_16_4,
+                         "snova5o", 0, 128, 34, 0);
 }
-static void *p256_snova2454_new_key(void *provctx) {
+static void *p256_snova5o_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_24_5_4, "p256_snova2454",
+                        OQS_SIG_alg_snova_SNOVA_24_5_16_4, "p256_snova5o",
                         KEY_TYPE_HYB_SIG, NULL, 128, 35, 0);
 }
 
-static void *p256_snova2454_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_24_5_4,
-                         "p256_snova2454", KEY_TYPE_HYB_SIG, 128, 35, 0);
+static void *p256_snova5o_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_24_5_16_4,
+                         "p256_snova5o", KEY_TYPE_HYB_SIG, 128, 35, 0);
 }
-static void *snova2454esk_new_key(void *provctx) {
+static void *snova5oa_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_24_5_4_esk, "snova2454esk",
+                        OQS_SIG_alg_snova_SNOVA_24_5_16_4_AES, "snova5oa",
                         KEY_TYPE_SIG, NULL, 128, 36, 0);
 }
 
-static void *snova2454esk_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_24_5_4_esk,
-                         "snova2454esk", 0, 128, 36, 0);
+static void *snova5oa_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection,
+                         OQS_SIG_alg_snova_SNOVA_24_5_16_4_AES, "snova5oa", 0,
+                         128, 36, 0);
 }
-static void *p256_snova2454esk_new_key(void *provctx) {
+static void *p256_snova5oa_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_24_5_4_esk, "p256_snova2454esk",
+                        OQS_SIG_alg_snova_SNOVA_24_5_16_4_AES, "p256_snova5oa",
                         KEY_TYPE_HYB_SIG, NULL, 128, 37, 0);
 }
 
-static void *p256_snova2454esk_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_24_5_4_esk,
-                         "p256_snova2454esk", KEY_TYPE_HYB_SIG, 128, 37, 0);
+static void *p256_snova5oa_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection,
+                         OQS_SIG_alg_snova_SNOVA_24_5_16_4_AES, "p256_snova5oa",
+                         KEY_TYPE_HYB_SIG, 128, 37, 0);
 }
-static void *snova37172_new_key(void *provctx) {
+static void *snova5_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_37_17_2, "snova37172",
+                        OQS_SIG_alg_snova_SNOVA_28_5_19_4, "snova5",
                         KEY_TYPE_SIG, NULL, 128, 38, 0);
 }
 
-static void *snova37172_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_37_17_2,
-                         "snova37172", 0, 128, 38, 0);
+static void *snova5_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_28_5_19_4,
+                         "snova5", 0, 128, 38, 0);
 }
-static void *p256_snova37172_new_key(void *provctx) {
+static void *p256_snova5_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_37_17_2, "p256_snova37172",
+                        OQS_SIG_alg_snova_SNOVA_28_5_19_4, "p256_snova5",
                         KEY_TYPE_HYB_SIG, NULL, 128, 39, 0);
 }
 
-static void *p256_snova37172_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_37_17_2,
-                         "p256_snova37172", KEY_TYPE_HYB_SIG, 128, 39, 0);
+static void *p256_snova5_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_28_5_19_4,
+                         "p256_snova5", KEY_TYPE_HYB_SIG, 128, 39, 0);
 }
-static void *snova2455_new_key(void *provctx) {
+static void *snova5a_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_24_5_5, "snova2455",
-                        KEY_TYPE_SIG, NULL, 192, 40, 0);
+                        OQS_SIG_alg_snova_SNOVA_28_5_19_4_AES, "snova5a",
+                        KEY_TYPE_SIG, NULL, 128, 40, 0);
 }
 
-static void *snova2455_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_24_5_5,
-                         "snova2455", 0, 192, 40, 0);
+static void *snova5a_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection,
+                         OQS_SIG_alg_snova_SNOVA_28_5_19_4_AES, "snova5a", 0,
+                         128, 40, 0);
 }
-static void *p384_snova2455_new_key(void *provctx) {
+static void *p256_snova5a_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_24_5_5, "p384_snova2455",
-                        KEY_TYPE_HYB_SIG, NULL, 192, 41, 0);
+                        OQS_SIG_alg_snova_SNOVA_28_5_19_4_AES, "p256_snova5a",
+                        KEY_TYPE_HYB_SIG, NULL, 128, 41, 0);
 }
 
-static void *p384_snova2455_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_24_5_5,
-                         "p384_snova2455", KEY_TYPE_HYB_SIG, 192, 41, 0);
+static void *p256_snova5a_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection,
+                         OQS_SIG_alg_snova_SNOVA_28_5_19_4_AES, "p256_snova5a",
+                         KEY_TYPE_HYB_SIG, 128, 41, 0);
 }
-static void *snova2965_new_key(void *provctx) {
+static void *snova7_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_29_6_5, "snova2965",
-                        KEY_TYPE_SIG, NULL, 256, 42, 0);
+                        OQS_SIG_alg_snova_SNOVA_40_7_19_4, "snova7",
+                        KEY_TYPE_SIG, NULL, 192, 42, 0);
 }
 
-static void *snova2965_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_29_6_5,
-                         "snova2965", 0, 256, 42, 0);
+static void *snova7_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_40_7_19_4,
+                         "snova7", 0, 192, 42, 0);
 }
-static void *p521_snova2965_new_key(void *provctx) {
+static void *p384_snova7_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_snova_SNOVA_29_6_5, "p521_snova2965",
-                        KEY_TYPE_HYB_SIG, NULL, 256, 43, 0);
+                        OQS_SIG_alg_snova_SNOVA_40_7_19_4, "p384_snova7",
+                        KEY_TYPE_HYB_SIG, NULL, 192, 43, 0);
 }
 
-static void *p521_snova2965_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_29_6_5,
-                         "p521_snova2965", KEY_TYPE_HYB_SIG, 256, 43, 0);
+static void *p384_snova7_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_40_7_19_4,
+                         "p384_snova7", KEY_TYPE_HYB_SIG, 192, 43, 0);
+}
+static void *snova9_new_key(void *provctx) {
+    return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
+                        OQS_SIG_alg_snova_SNOVA_50_9_19_4, "snova9",
+                        KEY_TYPE_SIG, NULL, 256, 44, 0);
 }
 
-static void *slhdsasha2128s_new_key(void *provctx) {
+static void *snova9_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_50_9_19_4,
+                         "snova9", 0, 256, 44, 0);
+}
+static void *p521_snova9_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_sha2_128s, "slhdsasha2128s",
-                        KEY_TYPE_SIG, NULL, 128, 44, 0);
+                        OQS_SIG_alg_snova_SNOVA_50_9_19_4, "p521_snova9",
+                        KEY_TYPE_HYB_SIG, NULL, 256, 45, 0);
 }
 
-static void *slhdsasha2128s_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_slh_dsa_pure_sha2_128s,
-                         "slhdsasha2128s", 0, 128, 44, 0);
+static void *p521_snova9_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_50_9_19_4,
+                         "p521_snova9", KEY_TYPE_HYB_SIG, 256, 45, 0);
 }
-static void *slhdsasha2128f_new_key(void *provctx) {
+static void *snova17_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_sha2_128f, "slhdsasha2128f",
-                        KEY_TYPE_SIG, NULL, 128, 45, 0);
+                        OQS_SIG_alg_snova_SNOVA_48_17_16_2, "snova17",
+                        KEY_TYPE_SIG, NULL, 128, 46, 0);
 }
 
-static void *slhdsasha2128f_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_slh_dsa_pure_sha2_128f,
-                         "slhdsasha2128f", 0, 128, 45, 0);
+static void *snova17_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_48_17_16_2,
+                         "snova17", 0, 128, 46, 0);
 }
-static void *slhdsasha2192s_new_key(void *provctx) {
+static void *p521_snova17_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_sha2_192s, "slhdsasha2192s",
-                        KEY_TYPE_SIG, NULL, 192, 46, 0);
+                        OQS_SIG_alg_snova_SNOVA_48_17_16_2, "p521_snova17",
+                        KEY_TYPE_HYB_SIG, NULL, 128, 47, 0);
 }
 
-static void *slhdsasha2192s_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_slh_dsa_pure_sha2_192s,
-                         "slhdsasha2192s", 0, 192, 46, 0);
+static void *p521_snova17_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_48_17_16_2,
+                         "p521_snova17", KEY_TYPE_HYB_SIG, 128, 47, 0);
 }
-static void *slhdsasha2192f_new_key(void *provctx) {
+static void *snova16_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_sha2_192f, "slhdsasha2192f",
-                        KEY_TYPE_SIG, NULL, 192, 47, 0);
+                        OQS_SIG_alg_snova_SNOVA_48_16_19_2, "snova16",
+                        KEY_TYPE_SIG, NULL, 128, 48, 0);
 }
 
-static void *slhdsasha2192f_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_slh_dsa_pure_sha2_192f,
-                         "slhdsasha2192f", 0, 192, 47, 0);
+static void *snova16_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_48_16_19_2,
+                         "snova16", 0, 128, 48, 0);
 }
-static void *slhdsasha2256s_new_key(void *provctx) {
+static void *p521_snova16_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_sha2_256s, "slhdsasha2256s",
-                        KEY_TYPE_SIG, NULL, 256, 48, 0);
+                        OQS_SIG_alg_snova_SNOVA_48_16_19_2, "p521_snova16",
+                        KEY_TYPE_HYB_SIG, NULL, 128, 49, 0);
 }
 
-static void *slhdsasha2256s_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_slh_dsa_pure_sha2_256s,
-                         "slhdsasha2256s", 0, 256, 48, 0);
+static void *p521_snova16_gen_init(void *provctx, int selection) {
+    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_snova_SNOVA_48_16_19_2,
+                         "p521_snova16", KEY_TYPE_HYB_SIG, 128, 49, 0);
 }
-static void *slhdsasha2256f_new_key(void *provctx) {
+static void *snova4_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_sha2_256f, "slhdsasha2256f",
-                        KEY_TYPE_SIG, NULL, 256, 49, 0);
-}
-
-static void *slhdsasha2256f_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection, OQS_SIG_alg_slh_dsa_pure_sha2_256f,
-                         "slhdsasha2256f", 0, 256, 49, 0);
-}
-static void *slhdsashake128s_new_key(void *provctx) {
-    return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_shake_128s, "slhdsashake128s",
+                        OQS_SIG_alg_snova_SNOVA_28_4_19_4x5, "snova4",
                         KEY_TYPE_SIG, NULL, 128, 50, 0);
 }
 
-static void *slhdsashake128s_gen_init(void *provctx, int selection) {
+static void *snova4_gen_init(void *provctx, int selection) {
     return oqsx_gen_init(provctx, selection,
-                         OQS_SIG_alg_slh_dsa_pure_shake_128s, "slhdsashake128s",
-                         0, 128, 50, 0);
+                         OQS_SIG_alg_snova_SNOVA_28_4_19_4x5, "snova4", 0, 128,
+                         50, 0);
 }
-static void *slhdsashake128f_new_key(void *provctx) {
+static void *p256_snova4_new_key(void *provctx) {
     return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_shake_128f, "slhdsashake128f",
-                        KEY_TYPE_SIG, NULL, 128, 51, 0);
+                        OQS_SIG_alg_snova_SNOVA_28_4_19_4x5, "p256_snova4",
+                        KEY_TYPE_HYB_SIG, NULL, 128, 51, 0);
 }
 
-static void *slhdsashake128f_gen_init(void *provctx, int selection) {
+static void *p256_snova4_gen_init(void *provctx, int selection) {
     return oqsx_gen_init(provctx, selection,
-                         OQS_SIG_alg_slh_dsa_pure_shake_128f, "slhdsashake128f",
-                         0, 128, 51, 0);
-}
-static void *slhdsashake192s_new_key(void *provctx) {
-    return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_shake_192s, "slhdsashake192s",
-                        KEY_TYPE_SIG, NULL, 192, 52, 0);
-}
-
-static void *slhdsashake192s_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection,
-                         OQS_SIG_alg_slh_dsa_pure_shake_192s, "slhdsashake192s",
-                         0, 192, 52, 0);
-}
-static void *slhdsashake192f_new_key(void *provctx) {
-    return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_shake_192f, "slhdsashake192f",
-                        KEY_TYPE_SIG, NULL, 192, 53, 0);
-}
-
-static void *slhdsashake192f_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection,
-                         OQS_SIG_alg_slh_dsa_pure_shake_192f, "slhdsashake192f",
-                         0, 192, 53, 0);
-}
-static void *slhdsashake256s_new_key(void *provctx) {
-    return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_shake_256s, "slhdsashake256s",
-                        KEY_TYPE_SIG, NULL, 256, 54, 0);
-}
-
-static void *slhdsashake256s_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection,
-                         OQS_SIG_alg_slh_dsa_pure_shake_256s, "slhdsashake256s",
-                         0, 256, 54, 0);
-}
-static void *slhdsashake256f_new_key(void *provctx) {
-    return oqsx_key_new(PROV_OQS_LIBCTX_OF(provctx),
-                        OQS_SIG_alg_slh_dsa_pure_shake_256f, "slhdsashake256f",
-                        KEY_TYPE_SIG, NULL, 256, 55, 0);
-}
-
-static void *slhdsashake256f_gen_init(void *provctx, int selection) {
-    return oqsx_gen_init(provctx, selection,
-                         OQS_SIG_alg_slh_dsa_pure_shake_256f, "slhdsashake256f",
-                         0, 256, 55, 0);
+                         OQS_SIG_alg_snova_SNOVA_28_4_19_4x5, "p256_snova4",
+                         KEY_TYPE_HYB_SIG, 128, 51, 0);
 }
 
 ///// OQS_TEMPLATE_FRAGMENT_KEYMGMT_CONSTRUCTORS_END
@@ -1466,28 +1425,24 @@ MAKE_SIG_KEYMGMT_FUNCTIONS(OV_Is_pkc_skc)
 MAKE_SIG_KEYMGMT_FUNCTIONS(p256_OV_Is_pkc_skc)
 MAKE_SIG_KEYMGMT_FUNCTIONS(OV_Ip_pkc_skc)
 MAKE_SIG_KEYMGMT_FUNCTIONS(p256_OV_Ip_pkc_skc)
-MAKE_SIG_KEYMGMT_FUNCTIONS(snova2454)
-MAKE_SIG_KEYMGMT_FUNCTIONS(p256_snova2454)
-MAKE_SIG_KEYMGMT_FUNCTIONS(snova2454esk)
-MAKE_SIG_KEYMGMT_FUNCTIONS(p256_snova2454esk)
-MAKE_SIG_KEYMGMT_FUNCTIONS(snova37172)
-MAKE_SIG_KEYMGMT_FUNCTIONS(p256_snova37172)
-MAKE_SIG_KEYMGMT_FUNCTIONS(snova2455)
-MAKE_SIG_KEYMGMT_FUNCTIONS(p384_snova2455)
-MAKE_SIG_KEYMGMT_FUNCTIONS(snova2965)
-MAKE_SIG_KEYMGMT_FUNCTIONS(p521_snova2965)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsasha2128s)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsasha2128f)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsasha2192s)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsasha2192f)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsasha2256s)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsasha2256f)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsashake128s)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsashake128f)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsashake192s)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsashake192f)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsashake256s)
-MAKE_SIG_KEYMGMT_FUNCTIONS(slhdsashake256f)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova5o)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p256_snova5o)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova5oa)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p256_snova5oa)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova5)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p256_snova5)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova5a)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p256_snova5a)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova7)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p384_snova7)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova9)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p521_snova9)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova17)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p521_snova17)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova16)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p521_snova16)
+MAKE_SIG_KEYMGMT_FUNCTIONS(snova4)
+MAKE_SIG_KEYMGMT_FUNCTIONS(p256_snova4)
 
 MAKE_KEM_KEYMGMT_FUNCTIONS(efrodo640aes, OQS_KEM_alg_efrodokem_640_aes, 128)
 

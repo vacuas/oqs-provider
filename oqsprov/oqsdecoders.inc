@@ -21,17 +21,13 @@
 
 /* Arguments are prefixed with '_' to avoid build breaks on certain platforms */
 #define DECODER(_name, _input, _output)                                        \
-    {                                                                          \
-        _name, "provider=" DECODER_PROVIDER ",input=" #_input,                 \
-            (oqs_##_input##_to_##_output##_decoder_functions)                  \
-    }
+    {_name, "provider=" DECODER_PROVIDER ",input=" #_input,                    \
+     (oqs_##_input##_to_##_output##_decoder_functions)}
 #define DECODER_w_structure(_name, _input, _structure, _output)                \
-    {                                                                          \
-        _name,                                                                 \
-            "provider=" DECODER_PROVIDER ",input=" #_input                     \
-            ",structure=" DECODER_STRUCTURE_##_structure,                      \
-            (oqs_##_structure##_##_input##_to_##_output##_decoder_functions)   \
-    }
+    {_name,                                                                    \
+     "provider=" DECODER_PROVIDER ",input=" #_input                            \
+     ",structure=" DECODER_STRUCTURE_##_structure,                             \
+     (oqs_##_structure##_##_input##_to_##_output##_decoder_functions)}
 
 ///// OQS_TEMPLATE_FRAGMENT_MAKE_START
 #ifdef OQS_KEM_ENCODERS
@@ -380,108 +376,63 @@ DECODER_w_structure("efrodo640aes", der, PrivateKeyInfo, efrodo640aes),
     DECODER_w_structure("p256_OV_Ip_pkc_skc", der, SubjectPublicKeyInfo,
                         p256_OV_Ip_pkc_skc),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_4
-    DECODER_w_structure("snova2454", der, PrivateKeyInfo, snova2454),
-    DECODER_w_structure("snova2454", der, SubjectPublicKeyInfo, snova2454),
-    DECODER_w_structure("p256_snova2454", der, PrivateKeyInfo, p256_snova2454),
-    DECODER_w_structure("p256_snova2454", der, SubjectPublicKeyInfo,
-                        p256_snova2454),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_16_4
+    DECODER_w_structure("snova5o", der, PrivateKeyInfo, snova5o),
+    DECODER_w_structure("snova5o", der, SubjectPublicKeyInfo, snova5o),
+    DECODER_w_structure("p256_snova5o", der, PrivateKeyInfo, p256_snova5o),
+    DECODER_w_structure("p256_snova5o", der, SubjectPublicKeyInfo,
+                        p256_snova5o),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_4_esk
-    DECODER_w_structure("snova2454esk", der, PrivateKeyInfo, snova2454esk),
-    DECODER_w_structure("snova2454esk", der, SubjectPublicKeyInfo,
-                        snova2454esk),
-    DECODER_w_structure("p256_snova2454esk", der, PrivateKeyInfo,
-                        p256_snova2454esk),
-    DECODER_w_structure("p256_snova2454esk", der, SubjectPublicKeyInfo,
-                        p256_snova2454esk),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_16_4_AES
+    DECODER_w_structure("snova5oa", der, PrivateKeyInfo, snova5oa),
+    DECODER_w_structure("snova5oa", der, SubjectPublicKeyInfo, snova5oa),
+    DECODER_w_structure("p256_snova5oa", der, PrivateKeyInfo, p256_snova5oa),
+    DECODER_w_structure("p256_snova5oa", der, SubjectPublicKeyInfo,
+                        p256_snova5oa),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_37_17_2
-    DECODER_w_structure("snova37172", der, PrivateKeyInfo, snova37172),
-    DECODER_w_structure("snova37172", der, SubjectPublicKeyInfo, snova37172),
-    DECODER_w_structure("p256_snova37172", der, PrivateKeyInfo,
-                        p256_snova37172),
-    DECODER_w_structure("p256_snova37172", der, SubjectPublicKeyInfo,
-                        p256_snova37172),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_5_19_4
+    DECODER_w_structure("snova5", der, PrivateKeyInfo, snova5),
+    DECODER_w_structure("snova5", der, SubjectPublicKeyInfo, snova5),
+    DECODER_w_structure("p256_snova5", der, PrivateKeyInfo, p256_snova5),
+    DECODER_w_structure("p256_snova5", der, SubjectPublicKeyInfo, p256_snova5),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_24_5_5
-    DECODER_w_structure("snova2455", der, PrivateKeyInfo, snova2455),
-    DECODER_w_structure("snova2455", der, SubjectPublicKeyInfo, snova2455),
-    DECODER_w_structure("p384_snova2455", der, PrivateKeyInfo, p384_snova2455),
-    DECODER_w_structure("p384_snova2455", der, SubjectPublicKeyInfo,
-                        p384_snova2455),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_5_19_4_AES
+    DECODER_w_structure("snova5a", der, PrivateKeyInfo, snova5a),
+    DECODER_w_structure("snova5a", der, SubjectPublicKeyInfo, snova5a),
+    DECODER_w_structure("p256_snova5a", der, PrivateKeyInfo, p256_snova5a),
+    DECODER_w_structure("p256_snova5a", der, SubjectPublicKeyInfo,
+                        p256_snova5a),
 #endif
-#ifdef OQS_ENABLE_SIG_snova_SNOVA_29_6_5
-    DECODER_w_structure("snova2965", der, PrivateKeyInfo, snova2965),
-    DECODER_w_structure("snova2965", der, SubjectPublicKeyInfo, snova2965),
-    DECODER_w_structure("p521_snova2965", der, PrivateKeyInfo, p521_snova2965),
-    DECODER_w_structure("p521_snova2965", der, SubjectPublicKeyInfo,
-                        p521_snova2965),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_40_7_19_4
+    DECODER_w_structure("snova7", der, PrivateKeyInfo, snova7),
+    DECODER_w_structure("snova7", der, SubjectPublicKeyInfo, snova7),
+    DECODER_w_structure("p384_snova7", der, PrivateKeyInfo, p384_snova7),
+    DECODER_w_structure("p384_snova7", der, SubjectPublicKeyInfo, p384_snova7),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_128s
-    DECODER_w_structure("slhdsasha2128s", der, PrivateKeyInfo, slhdsasha2128s),
-    DECODER_w_structure("slhdsasha2128s", der, SubjectPublicKeyInfo,
-                        slhdsasha2128s),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_50_9_19_4
+    DECODER_w_structure("snova9", der, PrivateKeyInfo, snova9),
+    DECODER_w_structure("snova9", der, SubjectPublicKeyInfo, snova9),
+    DECODER_w_structure("p521_snova9", der, PrivateKeyInfo, p521_snova9),
+    DECODER_w_structure("p521_snova9", der, SubjectPublicKeyInfo, p521_snova9),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_128f
-    DECODER_w_structure("slhdsasha2128f", der, PrivateKeyInfo, slhdsasha2128f),
-    DECODER_w_structure("slhdsasha2128f", der, SubjectPublicKeyInfo,
-                        slhdsasha2128f),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_48_17_16_2
+    DECODER_w_structure("snova17", der, PrivateKeyInfo, snova17),
+    DECODER_w_structure("snova17", der, SubjectPublicKeyInfo, snova17),
+    DECODER_w_structure("p521_snova17", der, PrivateKeyInfo, p521_snova17),
+    DECODER_w_structure("p521_snova17", der, SubjectPublicKeyInfo,
+                        p521_snova17),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_192s
-    DECODER_w_structure("slhdsasha2192s", der, PrivateKeyInfo, slhdsasha2192s),
-    DECODER_w_structure("slhdsasha2192s", der, SubjectPublicKeyInfo,
-                        slhdsasha2192s),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_48_16_19_2
+    DECODER_w_structure("snova16", der, PrivateKeyInfo, snova16),
+    DECODER_w_structure("snova16", der, SubjectPublicKeyInfo, snova16),
+    DECODER_w_structure("p521_snova16", der, PrivateKeyInfo, p521_snova16),
+    DECODER_w_structure("p521_snova16", der, SubjectPublicKeyInfo,
+                        p521_snova16),
 #endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_192f
-    DECODER_w_structure("slhdsasha2192f", der, PrivateKeyInfo, slhdsasha2192f),
-    DECODER_w_structure("slhdsasha2192f", der, SubjectPublicKeyInfo,
-                        slhdsasha2192f),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_256s
-    DECODER_w_structure("slhdsasha2256s", der, PrivateKeyInfo, slhdsasha2256s),
-    DECODER_w_structure("slhdsasha2256s", der, SubjectPublicKeyInfo,
-                        slhdsasha2256s),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_sha2_256f
-    DECODER_w_structure("slhdsasha2256f", der, PrivateKeyInfo, slhdsasha2256f),
-    DECODER_w_structure("slhdsasha2256f", der, SubjectPublicKeyInfo,
-                        slhdsasha2256f),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_128s
-    DECODER_w_structure("slhdsashake128s", der, PrivateKeyInfo,
-                        slhdsashake128s),
-    DECODER_w_structure("slhdsashake128s", der, SubjectPublicKeyInfo,
-                        slhdsashake128s),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_128f
-    DECODER_w_structure("slhdsashake128f", der, PrivateKeyInfo,
-                        slhdsashake128f),
-    DECODER_w_structure("slhdsashake128f", der, SubjectPublicKeyInfo,
-                        slhdsashake128f),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_192s
-    DECODER_w_structure("slhdsashake192s", der, PrivateKeyInfo,
-                        slhdsashake192s),
-    DECODER_w_structure("slhdsashake192s", der, SubjectPublicKeyInfo,
-                        slhdsashake192s),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_192f
-    DECODER_w_structure("slhdsashake192f", der, PrivateKeyInfo,
-                        slhdsashake192f),
-    DECODER_w_structure("slhdsashake192f", der, SubjectPublicKeyInfo,
-                        slhdsashake192f),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_256s
-    DECODER_w_structure("slhdsashake256s", der, PrivateKeyInfo,
-                        slhdsashake256s),
-    DECODER_w_structure("slhdsashake256s", der, SubjectPublicKeyInfo,
-                        slhdsashake256s),
-#endif
-#ifdef OQS_ENABLE_SIG_slh_dsa_pure_shake_256f
-    DECODER_w_structure("slhdsashake256f", der, PrivateKeyInfo,
-                        slhdsashake256f),
-    DECODER_w_structure("slhdsashake256f", der, SubjectPublicKeyInfo,
-                        slhdsashake256f),
+#ifdef OQS_ENABLE_SIG_snova_SNOVA_28_4_19_4x5
+    DECODER_w_structure("snova4", der, PrivateKeyInfo, snova4),
+    DECODER_w_structure("snova4", der, SubjectPublicKeyInfo, snova4),
+    DECODER_w_structure("p256_snova4", der, PrivateKeyInfo, p256_snova4),
+    DECODER_w_structure("p256_snova4", der, SubjectPublicKeyInfo, p256_snova4),
 #endif
     ///// OQS_TEMPLATE_FRAGMENT_MAKE_END
